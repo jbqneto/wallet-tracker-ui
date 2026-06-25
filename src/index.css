@@ -1,0 +1,93 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #0B0C0E;
+  color: #F4F5F7;
+  font-family: 'Geist', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: rgba(79,209,161,0.6) !important;
+}
+
+input::placeholder {
+  color: #5A5E66;
+}
+
+button {
+  font-family: 'Geist', system-ui, sans-serif;
+}
+
+/* ── Hover states (can't do in inline styles) ── */
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.04) !important;
+}
+
+.group-toggle:hover {
+  background: rgba(255,255,255,0.03) !important;
+}
+
+.wallet-row:hover {
+  background: rgba(255,255,255,0.025) !important;
+}
+
+.icon-btn:hover {
+  background: rgba(255,255,255,0.09) !important;
+}
+
+.chip-btn:hover {
+  opacity: 0.85;
+}
+
+.link-btn:hover {
+  opacity: 0.75;
+}
+
+/* ── Responsive layout ── */
+
+.desktop-layout {
+  display: flex;
+}
+
+.mobile-layout {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .desktop-layout {
+    display: none;
+  }
+  .mobile-layout {
+    display: flex;
+  }
+}
